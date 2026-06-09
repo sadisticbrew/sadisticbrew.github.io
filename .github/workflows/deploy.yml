@@ -38,7 +38,7 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-        run: hugo --minify --baseURL "https://sadisticbrew.github.io/"
+        run: hugo --minify --verbose --baseURL "https://sadisticbrew.github.io/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
