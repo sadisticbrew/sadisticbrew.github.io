@@ -1,0 +1,29 @@
+<article class="project-card terminal-card">
+  <div class="project-header">
+    <span class="project-name">{{ .name | upper }}</span>
+    <span class="project-sep"> — </span>
+    <span class="project-tagline">{{ .tagline | upper }}</span>
+  </div>
+  <div class="project-body">
+    <p class="project-desc">{{ .description }}</p>
+
+    {{ if .stack }}
+    <p class="project-stack"><strong>STACK:</strong> {{ delimit .stack ", " }}</p>
+    {{ end }}
+
+    <div class="project-build">
+      <strong>Current Build:</strong>
+      <ul>
+        {{ range .build }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+
+    {{ if .repoURL }}
+    <a href="{{ .repoURL }}" class="project-repo-link" target="_blank" rel="noopener">
+      <span>↗ CODE</span>
+    </a>
+    {{ end }}
+  </div>
+</article>

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="section blog-section">
+  <h2 class="section-title">{{ .Title | default "BLOG.DIR" | upper }}</h2>
+  <div class="blog-list">
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="blog-entry terminal-card">
+      <div class="blog-date">{{ .Date.Format "2006-01-02" }}</div>
+      <h3 class="blog-title">{{ .Title }}</h3>
+      {{ if .Params.description }}
+      <p class="blog-summary">{{ .Params.description }}</p>
+      {{ end }}
+    </a>
+    {{ else }}
+    <div class="blog-empty terminal-card">
+      <p>$ ls -la ./posts/<br>total 0<br>drwxr-xr-x 2 user user 40 — .<br><br><span class="dim">No posts yet. Check back soon.</span></p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

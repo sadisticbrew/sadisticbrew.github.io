@@ -1,0 +1,39 @@
+[[project]]
+name = "Muon"
+tagline = "eBPF-Based Process Tracer"
+description = "Muon is a high-performance, localised observability tool designed to bring instruction-level kernel tracing to the everyday developer's terminal."
+stack = ["C", "Go", "eBPF"]
+color = "green"
+build = [
+  "Built a Linux kernel-space process tracer in Go using eBPF, capturing syscall events across entire process trees with kernel-space PID filtering via eBPF hashtags.",
+  "Zero-copy overhead on file and memory syscall workloads (416 on baseline), with exec-heavy workloads at 12.7% overhead — compared to perf trace's 67.5% and strace's 140%.",
+  "Validated across 7 filtered apps with CPU frequency locked and scale-isolated — zero event losses.",
+  "Designed asynchronous single-binary installation. No agents, no kernel modules, no configuration; attaches to any running process via PID in under one second."
+]
+repoURL = "https://github.com/sadisticbrew/muon"
+
+[[project]]
+name = "Stanza"
+tagline = "Programming Language"
+description = "A custom interpreted programming language built from scratch in Python to understand language design fundamentals."
+stack = ["Python"]
+color = "green"
+build = [
+  "Control Flow & Loops: Supports if/else/elif, while, and for loops.",
+  "Functions: Added first-class support for named and anonymous functions.",
+  "Types & Logic: Added stronger comparators and custom booleans (redefining to 'fact' and 'cap')."
+]
+repoURL = "https://github.com/sadisticbrew/stanza-lang"
+
+[[project]]
+name = "Horcrux"
+tagline = "Cryptographic File Vault"
+description = "A CLI tool that secures sensitive files using AES-256-GCM envelope encryption. It deterministically generates the master encryption key and data encryption policies using Shamir's Secret Sharing (SSS) to ensure zero knowledge offline storage."
+stack = ["Go"]
+color = "green"
+build = [
+  "Encrypted Google Tink for memory-safe data wrapping of massive files.",
+  "Built a custom Shamir's Secret Sharing math engine from scratch to handle key sharding.",
+  "Designed a custom binary metadata header (HRX2) for secure key reconstruction and seamless file encryption."
+]
+repoURL = "https://github.com/sadisticbrew/Horcrux"

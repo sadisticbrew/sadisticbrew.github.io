@@ -1,0 +1,9 @@
+name = "Terminal Folio"
+license = "MIT"
+licenselink = "https://github.com/yourname/terminal-folio/blob/main/LICENSE"
+description = "A terminal/hacker-aesthetic portfolio theme for Hugo"
+tags = ["portfolio", "terminal", "dark", "minimal", "monospace"]
+min_version = "0.100.0"
+
+[author]
+  name = "Pratham Patel"

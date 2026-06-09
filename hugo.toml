@@ -1,0 +1,54 @@
+baseURL = "https://sadisticbrew.github.io/"
+locale = "en-us"
+title = "Pratham Patel — Systems Programmer"
+theme = "terminal-folio"
+
+[params]
+  name = "Pratham Patel"
+  subtitle = "Systems Programmer"
+  description = "I'm a student who enjoys building clean, functional digital tools and interfaces that work well and look good."
+  description2 = "I'm a computer science student who enjoys turning caffeine into working code. I focus on building clean, functional systems with an eye for simplicity and performance. My main interests lie in AI systems, data, and figuring out how things break so I can fix them better."
+  philosophy = "The best code is code that does not need to exist. The second best is code that's so simple it obviously has no bugs."
+  resumeURL = "/dl_a7f3e9c2b1.pdf"
+
+  # Education
+  degree = "B.Tech Computer Science Engg."
+  university = "NIE Mysuru"
+  eduYears = "2025 - Present"
+
+  # Social Links
+  email = "mailto:caffeinecompiler@duck.com"
+  github = "https://github.com/sadisticbrew"
+  linkedin = "https://linkedin.com/in/realpratham"
+  x = "https://x.com/RealPratham0"
+
+
+[params.skills]
+  languages = ["C", "Go", "Python"]
+  current_focus = ["Language Design", "System Architecture", "CLI Design"]
+  tools = ["Neovim", "tmux"]
+
+[[menus.main]]
+  name = "About"
+  url = "#about"
+  weight = 1
+
+[[menus.main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 2
+
+[[menus.main]]
+  name = "Resume"
+  url = "#resume"
+  weight = 3
+
+[[menus.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 4
+
+[[menus.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 5

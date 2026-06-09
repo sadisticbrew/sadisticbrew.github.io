@@ -1,0 +1,13 @@
+<header class="site-header" id="site-header">
+  <div class="header-content">
+    <div class="header-identity">
+      <h1 class="site-name">{{ .Site.Params.name | upper }}</h1>
+      <p class="site-subtitle">{{ .Site.Params.subtitle | upper }}</p>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="Main Navigation">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="nav-link">[{{ .Name | upper }}]</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>
