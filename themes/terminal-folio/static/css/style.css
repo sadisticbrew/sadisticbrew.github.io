@@ -2,7 +2,6 @@
    Terminal Folio — Style System
    A dark, terminal-inspired portfolio theme
    ============================================================ */
-
 /* --- CSS Reset & Base --- */
 *,
 *::before,
@@ -675,7 +674,9 @@ a:hover {
     text-decoration: underline;
     text-decoration-color: rgba(0, 255, 136, 0.35);
     text-underline-offset: 0.2em;
-    transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+    transition:
+        color var(--transition-fast),
+        text-decoration-color var(--transition-fast);
 }
 
 .post-content a:hover {
