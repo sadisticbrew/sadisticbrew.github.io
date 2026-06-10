@@ -1,3 +1,27 @@
 <footer class="site-footer" id="site-footer">
-  <p>&copy; {{ now.Year }} <span class="footer-name">{{ .Site.Params.name | upper }}</span></p>
+    <p class="webring-label">WEBRING</p>
+  <nav class="webring" aria-label="Webring Navigation">
+        <a
+            href="https://ring.seggs.lol/redirect?from=pratham&dir=prev"
+            class="webring-link"
+            id="webring-prev"
+            >← previous site</a
+        >
+        <a
+            href="https://ring.seggs.lol/random"
+            class="webring-link"
+            id="webring-random"
+            >random site</a
+        >
+        <a
+            href="https://ring.seggs.lol/redirect?from=pratham&dir=next"
+            class="webring-link"
+            id="webring-next"
+            >next site →</a
+        >
+    </nav>
+    <p>
+        &copy; {{ now.Year }}
+        <span class="footer-name">{{ .Site.Params.name | upper }}</span>
+    </p>
 </footer>

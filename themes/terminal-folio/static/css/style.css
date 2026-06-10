@@ -456,6 +456,41 @@ a:hover {
   letter-spacing: 0.06em;
 }
 
+.webring-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--green-primary);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.webring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.webring-link {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  letter-spacing: 0.04em;
+  transition: all var(--transition-fast);
+}
+
+.webring-link:hover {
+  border-color: var(--green-primary);
+  color: var(--green-primary);
+  background: var(--green-glow);
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.08);
+}
+
 .footer-name {
   color: var(--green-primary);
 }
