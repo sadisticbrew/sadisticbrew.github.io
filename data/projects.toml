@@ -13,17 +13,18 @@ build = [
 repoURL = "https://github.com/sadisticbrew/muon"
 
 [[project]]
-name = "Stanza"
-tagline = "Programming Language"
-description = "A custom interpreted programming language built from scratch in Python to understand language design fundamentals."
-stack = ["Python"]
+name = "burg-rt"
+tagline = "Minimal OCI Container Runtime"
+description = "A container runtime in ~1,200 lines of Go with no container libraries — just raw syscalls, man pages, and the OCI spec. Runs real Alpine containers end-to-end."
+stack = ["Go", "Linux"]
 color = "green"
 build = [
-  "Control Flow & Loops: Supports if/else/elif, while, and for loops.",
-  "Functions: Added first-class support for named and anonymous functions.",
-  "Types & Logic: Added stronger comparators and custom booleans (redefining to 'fact' and 'cap')."
+  "Built an OCI container runtime from scratch (~1.2k LOC): six namespaces, spec-driven mounts, pivot_root isolation, and a full create/start/kill/delete lifecycle.",
+  "Supervising init (PID 1) catches and forwards signals to the container process, since the kernel silently discards unhandled signals sent to namespace init.",
+  "Trustworthy state via a parent/init readiness-pipe handshake and atomic write-then-rename state files.",
+  "~5 ms cold starts over 30 runs with locked CPU frequency and pinned cores, backed by a 125-test suite ~1.75x the size of the runtime itself."
 ]
-repoURL = "https://github.com/sadisticbrew/stanza-lang"
+repoURL = "https://github.com/sadisticbrew/burg-rt"
 
 [[project]]
 name = "Horcrux"
@@ -37,3 +38,16 @@ build = [
   "Designed a custom binary metadata header (HRX2) for secure key reconstruction and seamless file encryption."
 ]
 repoURL = "https://github.com/sadisticbrew/Horcrux"
+
+[[project]]
+name = "Stanza"
+tagline = "Programming Language"
+description = "A custom interpreted programming language built from scratch in Python to understand language design fundamentals."
+stack = ["Python"]
+color = "green"
+build = [
+  "Control Flow & Loops: Supports if/else/elif, while, and for loops.",
+  "Functions: Added first-class support for named and anonymous functions.",
+  "Types & Logic: Added stronger comparators and custom booleans (redefining to 'fact' and 'cap')."
+]
+repoURL = "https://github.com/sadisticbrew/stanza-lang"
