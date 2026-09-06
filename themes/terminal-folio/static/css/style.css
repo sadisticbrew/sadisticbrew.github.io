@@ -346,11 +346,6 @@ a:hover {
     background: var(--green-glow);
 }
 
-/* Make the third project (Muon) span full width */
-.projects-grid .project-card:nth-child(3) {
-    grid-column: 1 / -1;
-}
-
 /* ============================================================
    Education & Resume
    ============================================================ */
@@ -958,10 +953,6 @@ a:hover {
 
     .projects-grid {
         grid-template-columns: 1fr;
-    }
-
-    .projects-grid .project-card:nth-child(3) {
-        grid-column: auto;
     }
 
     .contact-grid {
