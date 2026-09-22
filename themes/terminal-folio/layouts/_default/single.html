@@ -17,7 +17,11 @@
     {{ .Content }}
   </div>
   <div class="post-nav">
-    <a href="/blog/" class="nav-link">← BACK TO BLOG.DIR</a>
+    {{ with .Parent }}
+    <a href="{{ .Permalink }}" class="nav-link">← BACK TO {{ .LinkTitle | upper }}.DIR</a>
+    {{ else }}
+    <a href="/" class="nav-link">← BACK TO HOME</a>
+    {{ end }}
   </div>
 </article>
 {{ end }}

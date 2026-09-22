@@ -549,6 +549,17 @@ a:hover {
     opacity: 0.6;
 }
 
+.section-disclaimer {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+}
+
+.section-disclaimer strong {
+    color: var(--green-dim);
+}
+
 /* Blog Post */
 .blog-post {
     padding: 2rem 2.5rem;

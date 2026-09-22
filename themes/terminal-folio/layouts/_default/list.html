@@ -1,6 +1,9 @@
 {{ define "main" }}
 <section class="section blog-section">
   <h2 class="section-title">{{ .Title | default "BLOG.DIR" | upper }}</h2>
+  {{ with .Content }}
+  <div class="section-disclaimer terminal-card">{{ . }}</div>
+  {{ end }}
   <div class="blog-list">
     {{ range .Pages }}
     <a href="{{ .Permalink }}" class="blog-entry terminal-card">
@@ -15,6 +18,9 @@
       <p>$ ls -la ./posts/<br>total 0<br>drwxr-xr-x 2 user user 40 — .<br><br><span class="dim">No posts yet. Check back soon.</span></p>
     </div>
     {{ end }}
+  </div>
+  <div class="post-nav">
+    <a href="/" class="nav-link">← BACK TO HOME</a>
   </div>
 </section>
 {{ end }}

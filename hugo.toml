@@ -52,3 +52,8 @@ theme = "terminal-folio"
   name = "Blog"
   url = "/blog/"
   weight = 5
+
+[[menus.main]]
+  name = "Essays"
+  url = "/essays/"
+  weight = 6
